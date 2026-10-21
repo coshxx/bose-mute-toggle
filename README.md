@@ -1,4 +1,4 @@
-# Bose Mic-Toggle
+# Bose Mute-Toggle
 
 Mute and unmute your microphone in Microsoft Teams with a swipe on your headphones' volume control. No hotkey or mouse needed.
 
@@ -25,7 +25,7 @@ It watches the headphones' volume level through the Windows Core Audio API. Noth
 ## Usage
 
 1. Download or clone this repository.
-2. Double-click **`Bose Mic-Toggle.cmd`**.
+2. Double-click **`bose-mute-toggle.cmd`**.
 3. Leave the console window open. Close it to quit.
 
 The script waits for the headphones to connect and reconnects on its own if they disconnect.
@@ -34,7 +34,7 @@ The script waits for the headphones to connect and reconnects on its own if they
 
 ### Start automatically with Windows
 
-Press `Win+R`, type `shell:startup`, and put a shortcut to `Bose Mic-Toggle.cmd` in that folder.
+Press `Win+R`, type `shell:startup`, and put a shortcut to `bose-mute-toggle.cmd` in that folder.
 
 ## Options
 
@@ -49,17 +49,17 @@ You can pass these parameters when running the script directly:
 Example:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File bose-mic-toggle.ps1 -GestureWindowMs 1500
+powershell -NoProfile -ExecutionPolicy Bypass -File bose-mute-toggle.ps1 -GestureWindowMs 1500
 ```
 
-To change the defaults for the double-click launcher, add the parameters to the line in `Bose Mic-Toggle.cmd`.
+To change the defaults for the double-click launcher, add the parameters to the line in `bose-mute-toggle.cmd`.
 
 ### Other headphones
 
 Set `-DeviceMatch` to part of your headphones' name as it appears under *Settings → System → Sound*, for example:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File bose-mic-toggle.ps1 -DeviceMatch "WH-1000XM5"
+powershell -NoProfile -ExecutionPolicy Bypass -File bose-mute-toggle.ps1 -DeviceMatch "WH-1000XM5"
 ```
 
 This only works if the headphones' volume control changes the Windows volume (absolute volume over Bluetooth). Most current headphones do this.

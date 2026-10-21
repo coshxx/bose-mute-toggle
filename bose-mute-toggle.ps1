@@ -89,7 +89,7 @@ $swipe = $null      # current swipe: @{ Dir; Start; End; From }
 $lastSwipe = $null  # previous completed swipe
 $ignoreUntil = [datetime]::MinValue
 
-Log "Bose Mic-Toggle running. Gesture: volume up->down or down->up. Press Ctrl+C to quit."
+Log "Bose Mute-Toggle running. Gesture: volume up->down or down->up. Press Ctrl+C to quit."
 Log "Assuming mic is NOT muted at startup. Tone high->low = muted, low->high = unmuted."
 while ($true) {
   try {
